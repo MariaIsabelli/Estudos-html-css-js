@@ -1,0 +1,127 @@
+body {
+    background: url("https://cdn.vox-cdn.com/thumbor/l8dl188rt5aVr9h4bOY8wgGWvMQ=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20069646/pokemongofest2020_lookcloser_copy.jpg") no-repeat center top fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .titulo{
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0rem 0rem 0 0.75rem;
+    color: rgb(254, 225, 112);
+    text-shadow: 2px 2px #ff0000;
+  }
+  
+  .conteiner {
+      background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,108,253,1) 100%);
+      width: 30rem;
+    height: 32.7rem;
+      margin: 5rem auto;
+      border-radius: 25px;
+    box-shadow: 10px 5px 5px black;
+  }
+  
+  .pokemon {
+    margin: 0 0 1rem 5rem;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .quadro {
+    width: 95%;
+    height: 255px;
+    margin: 8px;
+    background: url(https://i.imgur.com/FbIpTsq.png);
+    background-size: 100%;
+    border: 5px solid #0074bd;
+  }
+  img {
+    margin: 30px;
+    width: 190px;
+    height: 190px;
+    filter: contrast(0%);
+  }
+  
+  input {
+    width: 75%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 1rem 1rem 0 2.3rem;
+    font-size:18px;
+    border: 3px solid #0074bd;
+    color: #17202A;
+    padding: 0 15px;
+    background: #f2f2f2;
+    outline: none;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 1px 1px #AED6F1;
+  }
+  
+  .quadro .acertou {
+    filter: none!important;
+  }
+  
+  #enviar {
+    width: 29%;
+    height: 40px;
+    margin: 0.5rem 1rem 0 10rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    text-shadow: 2px 2px #000000;
+    border-color: #3498DB;
+    text-align: center;
+    box-shadow: 2px 2px #000000;
+    color: rgb(254, 225, 112);
+    background-image: -webkit-linear-gradient(45deg, #E74C3C 50%, #3498DB 50%);
+    background-image: linear-gradient(45deg, #E74C3C 50%, #3498DB 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    border-radius: 20px;
+  }
+  #enviar:hover {
+    background-position: 0;
+  }
+  
+  span {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    font-size: 13px;
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    text-transform: uppercase;
+    color: rgb(254, 225, 112);
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
+    letter-spacing: 2px;
+  }
+  
+  #reload {
+    width: 25px;
+    height: 25px;
+    margin: -5rem 1rem 0 10rem;
+    font-size: 25px;
+    border: none;
+    float: right;
+    transition: 100ms;
+    background: transparent;
+    text-shadow: 2px 2px #AED6F1, 1px 1px #FFC300;
+  }
+  
+  #reload:hover {
+    color:#F1C40F;
+  }
+  #reload:active {
+    transform: rotate(360deg);
+    color:#a68500;
+    text-shadow: none;
