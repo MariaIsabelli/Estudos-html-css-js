@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="style.css">
+    <div class="screen">
+    <div class="container">
+      <div class="visuals">
+        <div class="tv">
+          <video width="324" height="282" loop>
+            <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/8-bit-zelda.mp4" type="video/mp4">
+          </video>        
+        </div>
+        <div class="analysers">
+          <div><span>pulse 1</span><canvas id="pulse" width="182" height="60"></canvas></div>
+          <div><span>pulse 2</span><canvas id="square" width="182" height="60"></canvas></div>
+          <div><span>triangle</span><canvas id="triangle" width="182" height="60"></canvas></div>
+          <div><span>noise</span><canvas id="noise" width="182" height="60"></canvas></div>
+        </div>
+      </div>
+      <div class="playlist">
+        <a class="song active" data-index="0">The Legend of Zelda (overworld)</a>
+        <a class="song" data-index="1">Pac-Man (intro)</a>
+        <a class="song" data-index="2">Super Mario Bros (overworld)</a>
+        <a class="song" data-index="3">Metroid (title theme)</a>
+        <a class="song" data-index="4">Kirby's Adventure (Vegetable Valley)</a>
+      </div>
+      <div class="play-wrapper">
+        <a class="play">Play</a>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
