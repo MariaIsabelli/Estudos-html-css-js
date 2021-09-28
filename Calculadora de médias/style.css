@@ -1,0 +1,36 @@
+corpo {
+    família da fonte :  'Roboto Mono' , monoespaço;
+    altura mínima :  400 px ;
+    imagem de fundo :  url ( 'https://image.flaticon.com/icons/png/512/201/201635.png' );
+    cor de fundo :  # 000000 ;
+    tamanho do fundo :  80 vh ;
+    posição de fundo : parte inferior central;
+    repetição de fundo : sem repetição;
+  
+  
+  . container {
+    alinhamento de texto : centro;
+    preenchimento :  20 px ;
+    altura :  100 vh ;
+  }
+  
+  . page-title {
+    cor : # ffffff ;
+    margem :  0  0  5 px ;
+  }
+  
+  . subtítulo da página {
+    cor : # ffffff ;
+    margem superior :  5 px ;
+  }
+  
+  . page-logo {
+    largura :  200 px ;
+  }
+  
+  . alura-logo {
+    largura :  40 px ;
+    posição : absoluta;
+    topo :  10 px ;
+    direita :  10 px ;
+  }
