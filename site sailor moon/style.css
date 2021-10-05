@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/*navigation starts*/
+
+body {
+  background-color: #fff;
+}
+img {
+  margin: 50px;
+}
+
+.txthover {
+  display: none;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: none;
+  padding: none;
+  overflow: hidden;
+  width: 100%;
+  height: 75px;
+  background-color: #f64747;
+}
+
+.innerbar {
+  float: right;
+  display: block;
+  margin: 25px 14px;
+}
+
+.innerbar li {
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.column img:hover {
+  background-color: #f64747;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+  transition: ease-in 0.5s;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+a:hover {
+  color: #E9D460;
+  padding: 5px;
+}
+
+#logo {
+  margin: -2px 0px 0px 12px;
+  float: left;
+  display: block;
+}
+
+#menu {
+  visibility: hidden;
+}
+
+
+/* Underline From Left */
+
+.hoverleft {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.hoverleft:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #E9D460;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hoverleft:hover:before,
+.hoverleft:focus:before,
+.hoverleft:active:before {
+  right: 0;
+}
+
+
+/*Navigation Bar Ends*/
+
+h1 {
+  font-family: 'Quicksand';
+  font-weight: 800;
+  color: #f64747;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: -2px;
+}
+
+p {
+  font-family: 'Quicksand';
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/*Photos Start*/
+
+
+@media screen and (max-width:320px) {
+  .innerbar {
+    padding: 0px;
+  }
+  .innerbar li {
+    font-size: 18px;
+    visibility: hidden;
+  }
+  #logo {
+    position: abosolute;
+    padding: 30px 100px 10px;
+  }
+  .nav-bar {
+    width: 100%;
+    height: 200px;
+  }
+  #menu {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    margin: 100px 110px 0px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  p: {
+    text-align: center;
+    font-size: 12px;
+}
+
+  .column {
+   max-width: 100%;
+  }
+.hover a {
+  position: absolute;
+  left: 5px;
+  top: 17px;
+  right: 5px;
+  bottom: 0px;
+  background: rgba(246, 71, 71, 0.7);
+  opacity: 0;
+  transition: all 500ms ease;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+.hover:before {
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.box:hover .hover {
+  opacity: 1;
+}
+
+@media screen and (min width: 768px) and (max-width: 1024px) {
+  .nav-bar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+ 
+  .nav-bar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .nav-bar {
+    width: 100%;
+  }
+}
