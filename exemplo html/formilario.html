@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="#" method="post">
+            <!-- action: Nesse atributo, você adicionará o endereço do arquivo/para qual página serão enviados os dados que serão processados. -->
+            <!-- method: especifica a forma como serão enviados os dados. Existem duas opções a serem atribuídas. Podem ser method=”get” e method=”post”. Quando o usuário preenche os dados do formulário, os valores que ele inseriu são passados pela URL, tendo como parâmetro esses dados, no caso do get, ao passo que o post é passado por uma transação HTTP, ou seja, não é passado pela URL. -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" maxlength="15" required autocomplete>
+            <!-- maxlenght: Nesse atributo é definida a quantidade de caracteres que o usuário poderá digitar naquele campo. -->
+            <!-- name: Nome do componente. -->
+            <!-- required: É atribuído para um campo que deve ser preenchido obrigatoriamente para que o formulário seja enviado, ou seja, caso o campo não seja preenchido, o formulário não será enviado. -->
+            <!-- autocomplete: Quando o usuário preenche o campo e envia o formulário, os dados ficam salvos; assim, caso ele queira enviar o formulário novamente, não é necessário redigitar todos os dados. -->
+            <br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" maxlength="40" required autocomplete>
+            <label for="exmplo">Exemplo</label>
+            <input type="email" id="exemplo" name="exemplo" value="example@example.com" readonly>
+            <!-- readonly: Atributo booleano (true or false), no qual o usuário não pode alterar o valor do controle. Ele é utilizado com o atributo value, em que recebe um valor e fica bloqueado para alteração de dados. -->
+            <br><br>
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="tel" maxlength="11" required autocomplete>
+            <br><br>
+            <label for="curriculo">Currículo:</label>
+            <input type="file" id="curriculo" name="curriculo" required autocomplete>
+            <br><br>
+            <label for="name">Nome:</label>
+            <input type="nome" id="nome" name="nome" maxlength="25" required autocomplete>
+            <br><br>
+            <div style="float:left">
+                <input type="submit" id="btn-enviar" name="btn-enviar" required >
+            </div>
+            <div>
+            <!-- textarea: atribuído para a caixa de texto -->
+            <!-- rows: define a quantidade de linhas e altera a altura do textarea -->
+            <!-- cols: define a quantidade de colunas e altera a largura do textarea -->
+            <!-- minlength: define a quantidade mínima de caracteres de um input -->
+            <!-- placeholder: define uma mensagem dentro da área de texto -->
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="20" maxlength="200" minlength="2" placeholder="Digite aqui sua mensagem" required autocomplete>
+        
+</body>
+</html>
