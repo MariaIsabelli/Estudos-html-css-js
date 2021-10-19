@@ -1,0 +1,373 @@
+images = 'https://www.instagram.com/static/bundles/es6/sprite_glyphs_2x_095009cdab40.png/095009cdab40.png'
+images2 = 'https://www.instagram.com/static/bundles/es6/sprite_core_2x_6ba81dcece9b.png/6ba81dcece9b.png'
+
+phone = 'https://www.searchpng.com/wp-content/uploads/2019/03/iPhone-Xs-Silver-PNG-1024x1024.png'
+body, html
+	margin 0
+	padding 0
+	width 100%
+	height 100vh
+	font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+*
+	box-sizing border-box
+a
+	text-decoration none
+	color #222266
+*:focus
+	outline none
+
+b
+	color #262626
+	font-weight 600
+button
+	background-color white
+
+.phone
+	position relative
+	width 700px
+	height 700px
+	display flex
+	align-items center
+	justify-content center
+	z-index 1000
+	margin 0 auto
+	padding 22px 5px
+	overflow hidden
+	&__background
+		position absolute
+		left 0
+		top 0
+		z-index 1001
+		width 100%
+		height 100%
+		background-image url(phone)
+		background-size cover
+		background-position center
+		pointer-events none
+#app
+	position relative
+	border-radius 35px
+	width 455px
+	height 140%
+	padding 107px 0 50px 0
+	margin 5px 115px 5px auto
+	overflow scroll
+	-webkit-overflow-scrolling touch
+	background white
+	backface-visibility hidden
+	-webkit-font-smoothing subpixel-antialiased
+	transform scale(0.7) translateZ(0) perspective(1px)
+	.container
+		max-width 425px
+.wiseHider
+	height 100%
+	width 20px
+	position absolute
+	background white
+	top 0
+	right 188px
+	z-index 1000
+img
+	max-width 100%
+.navbar
+	position absolute
+	top 0
+	left 0
+	right 0
+	height 117px
+	max-width 435px
+	width 100%
+	margin 0 140px 0 auto
+	padding 45px 0 0 10px
+	color black
+	display flex
+	background-color white
+	align-items center
+	justify-content space-between
+	border-bottom 1px solid #eee
+	z-index 999
+	transform scale(0.7) translateZ(0) perspective(1px)
+	transition-duration .2s
+	&--scrolled
+		height 105px
+		padding-top 55px
+		.navbar__logoText, .navbar__divider
+			display none
+	&__logos
+		height 29px
+		display flex
+		align-items center
+		cursor pointer
+	&__logoImage
+		width 24px
+		height 24px
+		background-image url(images)
+		background-size 282px 273px
+		background-position 0 -174px
+		background-repeat no-repeat
+		margin 0 20px
+	&__divider
+		display block
+		height 100%
+		width 1px
+		transform scaleX(.5)
+		background black
+	&__logoContainer
+		margin-top 7px
+	&__logoText
+		height 29px
+		width 103px
+		background-image url(images)
+		background-size 282px 273px
+		background-position 0 -144px
+		background-repeat no-repeat
+		margin 0 20px
+	&__buttons
+		height 100%
+		display flex
+		align-items center
+		justify-content space-between
+	&__button
+		width 24px
+		height 24px
+		margin 0 25px 0 0
+		cursor pointer
+		background-size 282px 273px
+		background-image url(images)
+		&:nth-child(1)
+			background-position -258px 0
+		&:nth-child(2)
+			background-position -50px -199px
+		&:nth-child(3)
+			background-position -208px -75px
+		&:nth-child(4)
+			background-position -258px -100px
+.stories
+	width 100%
+	height 103px
+	max-height 103px
+	border-bottom 1px solid #eee
+	background-color #fcfcfc
+	white-space nowrap
+	overflow hidden
+	&__container
+		width auto
+		height 153px
+		overflow-x scroll
+		-webkit-overflow-scrolling touch
+	&__story
+		position relative
+		display inline-flex
+		cursor pointer
+		width 64px
+		margin 0 4px
+		background transparent
+		padding 6px 2px
+		height 103px
+		border none
+		align-items center
+		justify-content space-between
+		flex-direction column
+		white-space nowrap
+		font-size 12px
+		p
+			line-height 15px
+		&:first-child
+			margin-left 10px
+		&:last-child
+			margin-right 12px
+		for num in (1..15)
+			&:nth-child({num})
+				animation-delay (num - 1) * 0.02s
+	&__unread
+		z-index 2
+		position absolute
+		top 1.5px
+		left -1px
+		width 65px
+		height 65px
+		background-image url(images2)
+		background-size 410px 396px
+		background-position -272px -65px
+	&__image
+		position relative
+		width 56px
+		height 56px
+		border-radius 50px
+		background-color #eee
+		img
+			position absolute
+			width 56px
+			height 56px
+			border-radius 50px
+			top 0
+			right 0
+	&__plus
+		width 18px
+		height 18px
+		background url(images2)
+		background-size 410px 396px
+		background-position -250px -254px
+		position absolute
+		right 0
+		bottom 0
+.disclaimer
+	padding 10px 15px
+	font-size 11px
+	color #999
+	border-bottom 1px solid #f4f4f4
+.post
+	height auto
+	position relative
+	width 100%
+	border-bottom 1px solid #fafafa
+	header
+		width 100%
+		height 60px
+		display flex
+		align-items center
+	&__authorPhoto
+		margin-left 15px
+		height 34px
+		width 34px
+		border-radius 34px
+		overflow hidden
+		box-shadow 0 0 2px rgba(0, 0, 0, .3)
+		cursor pointer
+	&__authorInfo
+		height 34px
+		margin-left 15px
+		display flex
+		flex-direction column
+		align-items flex-start
+		justify-content center
+		font-size 12px
+		line-height 16px
+		p, b
+			padding 0
+			margin 0
+		b
+			font-size 14px
+			cursor pointer
+		p
+			color #333
+	&__options
+		position absolute
+		top 17px
+		right 15px
+		height 24px
+		width 24px
+		border none
+		cursor pointer
+		background-size 282px 273px
+		background-position -50px -224px
+		background-image url(images)
+	&__photo
+		width 100%
+		position relative
+		img
+			width 100%
+	&__hearthAnimation
+		position absolute
+		left 0
+		right 0
+		top calc(50% - 40px)
+		animation-duration 1000ms
+		animation-name like-heart-animation
+		animation-timing-function ease-in-out
+		margin 0 auto
+		width 90px
+		height 80px
+		transform scale(0)
+		opacity 0
+		background-image url(images2)
+		background-size 410px 396px
+		background-position 0 -149px
+		z-index 2
+	&__description
+		margin-top 1px solid #fafafa
+		width 100%
+		padding 5px 12px
+		font-size 14px
+		section
+			width 95%
+			padding 3px 0
+			display flex
+			word-break brak-word
+	&__comments
+		flex-direction column
+		span
+			margin-top 4px
+	&__buttons
+		width 100% !important
+		display flex
+		align-items center
+		justify-content flex-start
+		button
+			border none
+			margin 0 15px 0 0
+			cursor pointer
+			height 24px
+			width 24px
+			background-size 282px 273px
+			background-image url(images)
+			&:nth-child(1)
+				background-position -50px -199px
+			&:nth-child(1)[active]
+				background-position -25px -199px
+			&:nth-child(2)
+				background-position -183px -50px
+			&:nth-child(3)
+				background-position 0 -249px
+			&:nth-child(4)
+				margin-left auto
+				margin-right 0
+				background-position -258px -100px
+			&:nth-child(4)[active]
+				background-position -258px -25px
+	&__tags
+		color #003569
+		display flex
+		flex-wrap wrap
+		span
+			margin 0 2px
+			cursor pointer
+	&__time
+		color #999
+		font-size 10px
+		text-transform uppercase
+		
+footer
+	position fixed
+	top 0
+	height auto
+	width 100vh
+	border-top 1px solid #f4f4f4
+	padding 8px 20px
+	text-align center
+	font-size 12px
+	color #222
+	transform-origin 0 0
+	transform rotate(90deg)
+	left 38px
+	z-index 1002
+
+.superbutton
+	position fixed
+	bottom 10px
+	right 10px
+	z-index 1002
+	
+@keyframes like-heart-animation
+	0%
+		opacity 0
+		transform scale(0)
+	15%
+		opacity .9
+		transform scale(1.2)
+	30%
+		transform scale(.95)
+	45%
+	80%
+		opacity .9
+		transform scale(1)

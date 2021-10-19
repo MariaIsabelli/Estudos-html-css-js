@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Instagram made with Vue.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="phone">
+  <div class="phone__background"></div>
+  <nav class="navbar">
+    <div class="navbar__logos">
+      <div class="navbar__logoImage"></div>
+      <div class="navbar__divider"></div>
+      <div class="navbar__logoContainer">
+        <div class="navbar__logoText"></div>
+      </div>
+    </div>
+    <div class="navbar__buttons">
+      <div class="navbar__button"></div>
+      <div class="navbar__button"></div>
+      <div class="navbar__button"></div>
+    </div>
+  </nav>
+  <div class="wiseHider"></div>
+  <div id="app">
+    <div class="container" id="scroll">
+      <div class="stories">
+        <div class="stories__container">
+          <button class="stories__story">
+            <div class="stories__image"><img src="https://instagram.fktw1-1.fna.fbcdn.net/vp/e6ceeffb38e591308a367d754249fd72/5D6D74F5/t51.2885-19/s150x150/26157331_552474028440445_4697328533893021696_n.jpg?_nc_ht=instagram.fktw1-1.fna.fbcdn.net"/>
+              <div class="stories__plus"></div>
+            </div>
+            <p>Your story</p>
+          </button>
+          <button class="stories__story" v-for="contact in contacts" :aria-label="&quot;Click to see&quot; + contact.name + &quot;'s story&quot;">
+            <div class="stories__image"><img :src="contact.photo"/></div>
+            <div class="stories__unread" v-if="contact.hasUnreadStory"></div>
+            <p>{{shortenName(contact.name)}}</p>
+          </button>
+        </div>
+      </div>
+      <section class="disclaimer"><i>Disclaimer: This shamefully rude copy of Instagram was made for fun only. All photos and images belong to their respective owners.</i></section>
+      <article class="post" v-for="post in feed">
+        <header><img class="post__authorPhoto" :src="post.author.photo"/>
+          <div class="post__authorInfo"><b>{{post.author.name}}</b>
+            <p>{{post.author.location}}</p>
+          </div>
+          <button class="post__options" aria-label="More options"></button>
+        </header>
+        <div class="post__photo">
+          <div class="post__hearthAnimation" v-if="post.likedByYou"></div><img v-if="post.type === &quot;photo&quot;" v-on:dblclick="likePost(post)" :srcset="post.photos[0]" :alt="post.photoDescription"/>
+        </div>
+        <div class="post__description">
+          <section class="post__buttons">
+            <button aria-label="I like it!" @click="likePost(post)" :active="post.likedByYou"></button>
+            <button aria-label="Comment"></button>
+            <button aria-label="Share"></button>
+            <button aria-label="Save" @click="post.saved = !post.saved" :active="post.saved"></button>
+          </section>
+          <section><b>Likes: {{post.likes}}</b></section>
+          <section><span><b> {{post.author.name}} </b> {{post.description}}</span></section>
+          <section class="post__tags"><span v-for="tag in post.tags">{{'#' + tag}}</span></section>
+          <section class="post__comments"><span v-for="comment in post.comments"><b> {{comment.author}} </b> {{comment.content}}</span></section>
+          <section class="post__time">{{post.time}}</section>
+        </div>
+      </article>
+      <section class="disclaimer">
+        <p>Do you want to make your own fake Instagram post? We have you covered! Just edit the data in JS code of this pen</p>
+      </section>
+    </div>
+  </div>
+</div>
+<footer>Made with ❤️ by <a href="https://github.com/karolsw3" target="_blank">Charles Spruce</a></footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

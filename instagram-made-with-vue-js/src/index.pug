@@ -1,0 +1,71 @@
+.phone
+	.phone__background
+	nav.navbar
+		.navbar__logos
+			.navbar__logoImage
+			.navbar__divider
+			.navbar__logoContainer
+				.navbar__logoText
+		.navbar__buttons
+			.navbar__button
+			.navbar__button
+			.navbar__button
+	.wiseHider
+	#app
+		.container#scroll
+			.stories
+				.stories__container
+					button.stories__story
+						.stories__image
+							img(src="https://instagram.fktw1-1.fna.fbcdn.net/vp/e6ceeffb38e591308a367d754249fd72/5D6D74F5/t51.2885-19/s150x150/26157331_552474028440445_4697328533893021696_n.jpg?_nc_ht=instagram.fktw1-1.fna.fbcdn.net")
+							.stories__plus
+						p Your story
+					button.stories__story(v-for='contact in contacts' :aria-label=`"Click to see" + contact.name + "'s story"`)
+						.stories__image
+							img(:src='contact.photo')
+						.stories__unread(v-if='contact.hasUnreadStory')
+						p {{shortenName(contact.name)}}
+			section.disclaimer
+				i Disclaimer: This shamefully rude copy of Instagram was made for fun only. All photos and images belong to their respective owners.
+			article.post(v-for='post in feed')
+				header
+					img.post__authorPhoto(:src='post.author.photo')
+					.post__authorInfo
+						b {{post.author.name}}
+						p {{post.author.location}}
+					button.post__options(aria-label='More options')
+				.post__photo
+					.post__hearthAnimation(v-if='post.likedByYou')
+					img(
+						v-if='post.type === "photo"'
+						v-on:dblclick='likePost(post)'
+						:srcset='post.photos[0]' 
+						:alt='post.photoDescription'
+					)
+				.post__description
+					section.post__buttons
+						button(
+							aria-label='I like it!' 
+							@click="likePost(post)"
+							:active="post.likedByYou"
+						)
+						button(aria-label='Comment')
+						button(aria-label='Share')
+						button(
+							aria-label='Save'
+							@click="post.saved = !post.saved"
+							:active="post.saved"
+						)
+					section
+						b Likes: {{post.likes}}
+					section
+						span <b> {{post.author.name}} </b> {{post.description}}
+					section.post__tags
+						span(v-for='tag in post.tags') {{'#' + tag}}
+					section.post__comments
+						span(v-for='comment in post.comments') <b> {{comment.author}} </b> {{comment.content}}
+					section.post__time {{post.time}}
+			section.disclaimer
+				p Do you want to make your own fake Instagram post? We have you covered! Just edit the data in JS code of this pen
+
+footer Made with ❤️ by <a href="https://github.com/karolsw3" target="_blank">Charles Spruce</a>
