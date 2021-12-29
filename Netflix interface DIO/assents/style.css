@@ -1,0 +1,93 @@
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background: var(--preta); 
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   
+}
+
+
+header .conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #AAA;
+}
+header .logo{
+    margin-left: 5px;
+    color:  var(--vermelho);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px ;
+
+}
+header nav a:hover{
+    color: #ffff;
+}
+
+.filme-pricipal{
+    font-size: 16px;
+    background-image: url('/img/longedecasa.jpg');
+    
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-pricipal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: rgb(15, 15, 15);
+
+}
+
+.filme-pricipal .titulo{
+    margin-top: 15px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(14, 13, 13);
+}
+.button{
+    background-color: rgba(0,0,0,50%);
+    border: none;
+    color: blanchedalmond;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition:.3s ease all ;
+}
+.button:hover{
+    background-color: burlywood;
+    color: black;
+}
+.button i{
+    margin-right: 8px;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-filmes{
+    margin-top: 5px;
+}
